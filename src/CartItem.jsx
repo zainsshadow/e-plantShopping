@@ -18,8 +18,9 @@ const CartItem = ({ onContinueShopping }) => {
 
   // Handle Continue Shopping
   const handleContinueShopping = (e) => {
+    // Pass the event to the parent component to prevent default behavior
     e.preventDefault();
-    onContinueShopping();
+    onContinueShopping(e); // Call the parent function with the event object
   };
 
 
